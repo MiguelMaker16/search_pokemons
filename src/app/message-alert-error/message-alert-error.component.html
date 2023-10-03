@@ -1,0 +1,14 @@
+<div class="flex justify-center items-center w-screen h-screen
+bg-gray-0 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-100 border-gray-100">
+    <div class="relative bg-white rounded-2xl sm:p-14 pl-8 pr-8 pt-14 pb-14
+     transition delay-200 ease-in-out"
+    [ngClass]="{ 'scale-0':!spawAlertError, 'scale-100':spawAlertError  }">
+        <span class="text-sky-700 text-xl font-bold">
+            Nombre De Pokémon Invalido
+        </span>
+        <div class="absolute w-10 h-10 right-0 bottom-0 mr-2 mb-2
+        rounded-full shadow-lg hover:cursor-pointer" (click)="toggleErrorAlert()">
+            <img src="../../assets/icons/error.svg" alt="">
+        </div>
+    </div>
+</div>

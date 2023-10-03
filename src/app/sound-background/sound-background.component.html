@@ -1,0 +1,5 @@
+<div class="bg-sky-700 rounded-full shadow-lg p-4 w-16 h-16 hover:cursor-pointer"
+(click)="toggleSound()">
+    <img class="invert" src="../../assets/icons/audio.svg" alt=""
+    [ngClass]="{ 'opacity-50':soundChangeImge < 0, 'opacity-100':soundChangeImge > 0   }">
+</div>

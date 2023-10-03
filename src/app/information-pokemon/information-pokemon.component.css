@@ -1,0 +1,18 @@
+.pixel-art {
+    image-rendering: pixelated;
+    filter: drop-shadow(2px 2px 2px black);
+    animation: animate 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    transform-origin: center;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,24 @@
+<div class="flex flex-col justify-center items-center w-screen h-screen
+bg-gradient-to-b from-cyan-500 to-blue-500">
+<app-sound-background class="z-20 absolute left-0 ml-10 top-0 mt-10"></app-sound-background>
+<app-effect-background-square class="z-10"></app-effect-background-square>
+    <div class="z-20 flex justify-center items-center sm:w-96 w-80 hover:scale-110 transition-all">
+        <img src="../../assets/images/pokemon-logo.png" alt="pokemon-logo">
+    </div>
+    <div class="z-20 flex flex-col sm:flex-row items-center sm:items-start mt-6 gap-4">
+        <div class="relative flex items-center hover:scale-110 transition-all">
+            <input class="pl-14 pt-4 pb-4 pr-4 rounded-full shadow-lg bg-sky-700
+            placeholder-white text-white font-bold focus:outline-none" 
+            type="text" placeholder="Nombre Pokémon" id="search-pokemon"
+            [(ngModel)]="namePokemon" (keyup.enter)="toggleSearch()">
+            <div class="absolute w-6 h-6 ml-4">
+                <img src="../../assets/icons/pokeball.svg" alt="svg-pokeball">
+            </div>
+        </div>
+        <button class="w-32 sm:w-auto p-4 rounded-full shadow-lg bg-sky-700 text-white
+        font-bold hover:scale-110 transition-all" (click)="toggleSearch()">Buscar</button>
+    </div>
+
+    <app-message-alert-error class="z-30 absolute" *ngIf="errorAlert" 
+    (errorAlert)="setErrorAlert($event)"></app-message-alert-error>
+</div>
